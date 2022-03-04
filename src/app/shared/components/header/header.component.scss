@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  background-color: var(--secondary-color);
+  img {
+    height: 54px;
+  }
+  .title {
+    color: var(--primary-color);
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 0 0 20px;
+  }
+  .profile {
+    display: flex;
+    justify-content: space-between;
+    .arrow {
+      margin-right: 10px;
+    }
+    img {
+      cursor: pointer;
+      height: 36px;
+    }
+  }
+}

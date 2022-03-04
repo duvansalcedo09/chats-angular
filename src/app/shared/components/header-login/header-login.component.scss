@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  background-color: var(--secondary-color);
+  img {
+    height: 54px;
+  }
+  .title {
+    color: var(--primary-color);
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 0 0 20px;
+  }
+}

@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+//Vars of colors
+:root {
+  --primary-color: #24045c94;
+  --secondary-color: #c4c4c4;
+  --input-color: #efefef;
+}
+//Class recurrent element
+.input-title {
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+}
+.custom-input {
+  background: var(--input-color);
+  border-radius: 10px;
+  padding: 15px 10px;
+  min-width: 300px !important;
+}
+.custom-button {
+  background: var(--input-color);
+  border-radius: 10px;
+  padding: 15px 20px;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.container-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+//Global tags settings
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+input {
+  outline: none;
+  border: none;
+}
