@@ -6,10 +6,17 @@ import { AppComponent } from "./app.component";
 import { LayoutComponent } from "./layout/layout.component";
 import { SharedModule } from "./shared/shared.module";
 import { FormsModule } from "@angular/forms";
+import { CoreModule } from "./core/core.module";
 
 @NgModule({
   declarations: [AppComponent, LayoutComponent],
-  imports: [BrowserModule, AppRoutingModule, SharedModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SharedModule,
+    FormsModule,
+    CoreModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

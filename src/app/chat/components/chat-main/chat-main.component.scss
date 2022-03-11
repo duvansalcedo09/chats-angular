@@ -1,14 +1,17 @@
-bode .container-main {
+.container-main {
   display: flex;
+  width: 100%;
   height: 100%;
+  // position: fixed;
   .chats-container {
     width: 30vw;
-    height: 100%;
-    background: red;
+    height: 87vh;
+    overflow-y: scroll;
   }
   .message-container {
+    border-left: #24045c 1px solid;
     width: 70vw;
-    height: 100%;
-    background: blue;
+    height: 87vh;
+    padding: 10px;
   }
 }

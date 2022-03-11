@@ -1,5 +1,8 @@
 <div class="container-main">
-  <div class="chats-container"></div>
+  <div class="chats-container">
+    <app-contacts *ngFor="let item of contacts" [contact]="item"></app-contacts>
+  </div>
   <div class="message-container">
+    <app-conversation></app-conversation>
   </div>
 </div>

@@ -1,0 +1,18 @@
+<div class="modal-background">
+  <div class="contenerdor-mensaje main-container">
+    <div class="container-form">
+      <label class="input-title">Nombre:</label>
+      <input class="custom-input" type="text" [(ngModel)]="contact.name">
+      <label class="input-title">Email:</label>
+      <input class="custom-input" type="email" [(ngModel)]="contact.email">
+    </div>
+    <div class="container-form">
+      <div class="custom-button" (click)="onAddContact()">
+        Agregar contacto
+      </div>
+      <div class="custom-button" (click)="onClose()">
+        Cerrar
+      </div>
+    </div>
+  </div>
+</div>

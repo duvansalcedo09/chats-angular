@@ -7,16 +7,16 @@
   <div class="container-card">
     <div class="container-form">
       <label class="input-title">Nombre completo:</label>
-      <input class="custom-input" type="text">
+      <input class="custom-input" type="text" [(ngModel)]="user.name">
       <label class="input-title">Email:</label>
-      <input class="custom-input" type="email">
+      <input class="custom-input" type="email" [(ngModel)]="user.email">
       <label class="input-title">Contraseña:</label>
-      <input class="custom-input" type="password">
+      <input class="custom-input" type="password" [(ngModel)]="user.password">
       <label class="input-title">Repetir contraseña:</label>
-      <input class="custom-input" type="password">
+      <input class="custom-input" type="password" [(ngModel)]="user.repeatPassword">
     </div>
     <div class="container-form">
-      <div class="custom-button" (click)="onRedirectTo('Login')">
+      <div class="custom-button" (click)="onRegister()">
         Registrarse
       </div>
     </div>

@@ -1,0 +1,35 @@
+.main-container {
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 70px;
+  border-radius: 14px;
+}
+
+.modal-background {
+  height: 100%;
+  position: fixed;
+  background: #41404073;
+  top: 0px;
+  z-index: 30;
+  width: 100%;
+  .contenerdor-mensaje {
+    z-index: 30;
+    position: relative;
+    width: 48vh;
+    min-height: 100px;
+    margin: 18vh auto;
+    padding: 10px;
+    border-radius: 7px;
+    .row {
+      text-align: end;
+      padding: 0 0 10px;
+      span {
+        cursor: pointer;
+        font-size: 35px;
+        color: var(--button-color);
+      }
+    }
+  }
+}

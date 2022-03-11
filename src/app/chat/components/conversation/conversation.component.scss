@@ -1,0 +1,73 @@
+.container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  .header {
+    flex-shrink: 0;
+    flex-grow: 0;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    background-color: #c4c4c4;
+    text-align: right;
+    label {
+      font-size: 20px;
+    }
+  }
+  .container-message {
+    flex-shrink: 1;
+    flex-grow: 1;
+    position: relative;
+    padding: 10px;
+    border: 1px solid #24045c94;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    .sub-container {
+      width: 100%;
+    }
+    .item-message {
+      background: #24045c94;
+      width: fit-content;
+      padding: 10px;
+      border-radius: 10px;
+      margin: 10px 0;
+      color: white;
+      max-width: 50%;
+      min-width: 25%;
+      .message {
+        margin-bottom: 10px;
+      }
+    }
+    .me {
+      align-self: end;
+      text-align: end;
+      background: #f4f4f4;
+      color: black;
+      border: 1px solid #24045c94;
+    }
+  }
+  .input-message {
+    flex-shrink: 0;
+    flex-grow: 0;
+    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    color: black;
+    border: 1px solid #24045c94;
+    width: 100%;
+    display: flex;
+    textarea {
+      width: 88%;
+      height: 56px;
+      background: transparent;
+      border: unset;
+    }
+    button {
+      border: unset;
+      border-radius: 0 0 10px 0;
+      border-left: 2px solid #24045c94;
+      width: 12%;
+    }
+  }
+}
