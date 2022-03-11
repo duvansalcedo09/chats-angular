@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
+import { MainService } from "src/app/core/services/main.service";
 
 @Component({
   selector: "app-conversation",
@@ -7,7 +8,42 @@ import { Component, OnInit } from "@angular/core";
 })
 export class ConversationComponent implements OnInit {
   arrais = [1, 1, 1, 1, 1, 1, 1, 1];
-  constructor() {}
+  public messages: any = [];
+  public message: string = "";
+  @Input() contact;
 
-  ngOnInit() {}
+  constructor(private mainService: MainService) {}
+
+  ngOnInit() {
+    this.getChat();
+  }
+
+  public getChat() {
+    setInterval(() => {
+      this.mainService
+        .get({
+          api: `api/message/${this.contact.userFrom}/${this.contact.userTo}`,
+        })
+        .subscribe((res) => {
+          console.log(res);
+          this.messages = res;
+        });
+    }, 2000);
+  }
+
+  public onSendMessage() {
+    this.mainService
+      .post({
+        api: `api/message`,
+        data: {
+          from: this.contact.userFrom,
+          to: this.contact.userTo,
+          message: this.message,
+        },
+      })
+      .subscribe((res) => {
+        this.messages.push(res);
+        this.message = "";
+      });
+  }
 }

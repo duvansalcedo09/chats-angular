@@ -1,29 +1,20 @@
 <div class="container">
   <div class="header">
-    <label>Duvan SALCEDO</label>
+    <label>{{ contact?.name }}</label>
   </div>
   <div class="container-message">
-    <div class="item-message" *ngFor="let e of arrais">
+    <div class="item-message" [ngClass]="{'me': contact.userFrom == e.from }" *ngFor="let e of messages">
       <label class="message">
-        Hola
+        {{ e.message }}
       </label>
       <br>
       <label class="date">
-        20/01/2022
-      </label>
-    </div>
-    <div class="item-message me" *ngFor="let e of arrais">
-      <label class="message">
-        ;kdasj ;kdasj ;kdasj;kdasj
-      </label>
-      <br>
-      <label class="date">
-        20/01/2022
+        {{ e.createdAt | date:"short" }}
       </label>
     </div>
   </div>
   <div class="input-message">
-    <textarea type="text" name="" placeholder="Escriba un mensaje..."></textarea>
-    <button>Enviar</button>
+    <textarea type="text" name="" placeholder="Escriba un mensaje..." [(ngModel)]="message"></textarea>
+    <button (click)="onSendMessage()">Enviar</button>
   </div>
 </div>

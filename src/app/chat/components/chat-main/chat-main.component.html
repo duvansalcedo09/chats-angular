@@ -1,8 +1,8 @@
 <div class="container-main">
   <div class="chats-container">
-    <app-contacts *ngFor="let item of contacts" [contact]="item"></app-contacts>
+    <app-contacts *ngFor="let item of contacts" [contact]="item" (click)="onSelectContact(item)"></app-contacts>
   </div>
   <div class="message-container">
-    <app-conversation></app-conversation>
+    <app-conversation [contact]="chat"></app-conversation>
   </div>
 </div>
